@@ -1,6 +1,5 @@
 import React from 'react';
 import "./TopWork.css"
-import AllCards from '../AllCards/AllCards';
 
 const TopWork = () => {
     return (
@@ -33,8 +32,7 @@ const TopWork = () => {
                 </div>
             </div>
         </section>
-        <AllCards/>
-        <section className="everyone">
+        {/* <section className="everyone">
             <div className="container-lg">
                 <div className="row">
                     <div className="section_text section_text_white">
@@ -47,7 +45,7 @@ const TopWork = () => {
                     <div className="section_image section-everyone-img"></div>
                 </div>
             </div>
-        </section>
+        </section> */}
         </div>
     );
 };

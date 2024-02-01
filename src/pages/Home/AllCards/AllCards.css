@@ -1,4 +1,7 @@
 /* BEGIN CARD DESIGN */
+.cardContainer{
+    margin: 60px 0;
+}
 .hero {
     display: inline-block;
     position: relative;

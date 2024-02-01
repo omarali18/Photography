@@ -6,7 +6,7 @@ import img_2 from "../../../images/gallery/home_t_2.jpg"
 const AllCards = () => {
     return (
         <div>
-            <section class="d-flex flex-wrap justify-content-center">
+            <section class="d-flex flex-wrap justify-content-center cardContainer">
             <div className="second hero">
                 <img className="hero-profile-img" src={img_1} alt=""/>
                 <div className="hero-description-bk"></div>
