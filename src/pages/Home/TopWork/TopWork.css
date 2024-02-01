@@ -1,0 +1,192 @@
+
+.white {
+    color: #ffffff;
+  }
+.container-lg {
+  width: 100%;
+  margin: 0 auto;
+}
+.container-lg {
+    max-width: 3000px;
+  }
+  .row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .section_text {
+    width: 43%;
+    height: 590px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .heading {
+    font-size: 40px;
+    text-transform: uppercase;
+    letter-spacing: 4.17px;
+  }
+  
+  .section_text_black {
+    background-color: #000000;
+  }
+  .section_text_white {
+    background-color: #ffffff;
+  }
+  
+
+  .section_text-box {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 0 55px;
+  }
+  
+  .section_text-box p {
+    line-height: 25px;
+    margin: 40px 0 55px;
+  }
+  p.opaque-grey {
+    color: rgba(223, 223, 223, 0.6);
+  }
+  p.opaque-black {
+    color: rgba(0, 0, 0, 0.6);
+  }
+  .invite-link {
+    text-transform: uppercase;
+    font-size: 12px;
+    font-family: "DM Sans Bold", sans-serif;
+    letter-spacing: 2px;
+  }
+  .invite-link {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    max-width: 165px;
+    position: relative;
+    text-decoration: none;
+  }
+  
+  .invite-link::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    width: 42px;
+    height: 12px;
+    background-size: cover;
+    -webkit-transition: -webkit-transform .4s;
+    transition: -webkit-transform .4s;
+    transition: transform .4s;
+    transition: transform .4s, -webkit-transform .4s;
+  }
+  
+  .invite-link:hover {
+    text-decoration: underline;
+    /* color: white; */
+  }
+  
+  .invite-link:hover::after {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+  }
+  .invite-link-white {
+    color: #ffffff;
+  }
+  
+  .invite-link-white::after {
+    background-image: url("../../../images/svg/arrow-white.svg");
+  }
+  .invite-link-white:hover{
+    color: white;
+  }
+  .invite-link-black {
+    color: #000000;
+    max-width: 200px;
+  }
+  .invite-link-black::after {
+    background-image: url("../../../images/svg/arrow-black.svg");
+  }
+  .invite-link-black:hover{
+    color: black;
+  }
+  .section_image {
+    width: 57%;
+  }
+  .section-create-img {
+    background-image: url("../../../images/gallery/create-and-share.jpg");
+    background-size: cover;
+  }
+  
+  .section_image {
+      width: 57%;
+    }
+    .section-stories-img {
+      background-image: url("../../../images/gallery/beautiful-stories.jpg");
+      background-size: cover;
+    }
+
+  @media screen and (max-width: 1024px) {
+    .heading {
+        font-size: 36px;
+      }
+    .section_text {
+        width: 65%;
+      }
+      .section_image {
+        width: 35%;
+      }
+      .stories .section_text-box {
+        max-width: 100%;
+      }
+      .section_image {
+        width: 35%;
+      }
+      .section-stories-img, .section-create-img {
+        background-position: center;
+      }
+  }
+  @media screen and (max-width: 768px) {
+    .heading {
+        font-size: 30px;
+      }
+  }
+  @media screen and (max-width: 600px) {
+    .section_text-box {
+      padding: 0 30px;
+    }
+  }
+@media screen and (max-width: 560px) {
+    .heading {
+        font-size: 28px;
+      }
+    .section_text-box p {
+        margin: 20px 0;
+      }
+      .stories .row, .beta .row {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+      }
+    .create .row {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+            -ms-flex-direction: column-reverse;
+                flex-direction: column-reverse;
+      }
+      .section_text {
+        width: 100%;
+        height: 350px;
+      }
+      .section_image {
+        width: 100%;
+        height: 300px;
+      }
+}
