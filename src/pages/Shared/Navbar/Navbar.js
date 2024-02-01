@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import "./Navbar.css"
-import navLogo from '../../../images/shortImg/logo.svg'
+import navLogo from '../../../images/shortImg/topLogo.jpg'
 import TopWork from '../../Home/TopWork/TopWork';
 
 const Navbar = () => {
@@ -20,7 +20,7 @@ const Navbar = () => {
                 <div className="container">
                     <nav className="navbar">
                         <a href="index.html" className="logo">
-                        <img src={navLogo} alt="logo" />
+                        <img src={navLogo} alt="logo" style={{width:'100px'}} />
                         </a>
                         <ul className="nav_list" id="navList">
                             <li className="nav_list-item">

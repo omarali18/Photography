@@ -120,7 +120,7 @@
     width: 57%;
   }
   .section-create-img {
-    background-image: url("../../../images/gallery/create-and-share.jpg");
+    background-image: url("../../../images/gallery/home_t_3.jpg");
     background-size: cover;
   }
   
@@ -128,9 +128,13 @@
       width: 57%;
     }
     .section-stories-img {
-      background-image: url("../../../images/gallery/beautiful-stories.jpg");
+      background-image: url("../../../images/gallery/home_t_1.webp");
       background-size: cover;
     }
+    .section-everyone-img {
+        background-image: url("../../../images/gallery/home_t_2.jpg");
+        background-size: cover;
+      }
 
   @media screen and (max-width: 1024px) {
     .heading {
@@ -145,10 +149,13 @@
       .stories .section_text-box {
         max-width: 100%;
       }
+      .everyone .section_text-box {
+        max-width: 100%;
+      }
       .section_image {
         width: 35%;
       }
-      .section-stories-img, .section-create-img {
+      .section-stories-img, .section-create-img, .section-everyone-img {
         background-position: center;
       }
   }
@@ -169,13 +176,15 @@
     .section_text-box p {
         margin: 20px 0;
       }
+    
+      
       .stories .row, .beta .row {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
             -ms-flex-direction: column;
                 flex-direction: column;
       }
-    .create .row {
+      .everyone .row, .create .row {
         -webkit-box-orient: vertical;
         -webkit-box-direction: reverse;
             -ms-flex-direction: column-reverse;
