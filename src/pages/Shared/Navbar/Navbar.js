@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import "./Navbar.css"
 import navLogo from '../../../images/shortImg/topLogo.png'
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     
@@ -19,20 +20,17 @@ const Navbar = () => {
                 <div className="container">
                     <nav className="navbar">
                         <a href="index.html" className="logo">
-                        <img src={navLogo} alt="logo" style={{width:'110px'}} />
+                        <img src={navLogo} alt="logo" style={{width:'150px'}} />
                         </a>
                         <ul className="nav_list" id="navList">
                             <li className="nav_list-item">
-                                <a href="stories.html" className="nav_list-link">Home</a>
+                                <Link className="nav_list-link" to={`/`}>Home</Link>
                             </li>
                             <li className="nav_list-item">
-                                <a href="stories.html" className="nav_list-link">Blog</a>
+                                <Link className="nav_list-link" to={`/about`}>About us</Link>
                             </li>
                             <li className="nav_list-item">
-                                <a href="features.html" className="nav_list-link">About us</a>
-                            </li>
-                            <li className="nav_list-item">
-                                <a href="pricing.html" className="nav_list-link">Contact us</a>
+                                <Link className="nav_list-link" to={`/contact`}>Contact us</Link>
                             </li>
                         </ul>
                         <a href="index.html" className="btn btn-black">Get an invite</a>
