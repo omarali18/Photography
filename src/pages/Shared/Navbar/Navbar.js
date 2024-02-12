@@ -27,6 +27,9 @@ const Navbar = () => {
                                 <Link className="nav_list-link" to={`/`}>Home</Link>
                             </li>
                             <li className="nav_list-item">
+                                <Link className="nav_list-link" to={`/marketing`}>Media & Marketing</Link>
+                            </li>
+                            <li className="nav_list-item">
                                 <Link className="nav_list-link" to={`/about`}>About us</Link>
                             </li>
                             <li className="nav_list-item">

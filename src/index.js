@@ -8,14 +8,22 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Home from './pages/Home/Home/Home';
-import Blog from './pages/Blogs/Blog/Blog';
 import AboutUs from './pages/AboutUs/About/AboutUs';
 import ContactUs from './pages/ContactUs/ContactUs/ContactUs';
+import MediaMarketing from './pages/MediaMarketing/MediaMarketing/MediaMarketing';
+import Login from './pages/Login/Login';
+import Dashboard from './pages/Dashboard/Dashboard/Dashboard';
+import AddPhotography from './pages/Dashboard/AddPhotography/AddPhotography';
+import AddVideography from './pages/Dashboard/AddVideography/AddVideography';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Home></Home>,
+  },
+  {
+    path: "/marketing",
+    element: <MediaMarketing></MediaMarketing>,
   },
   {
     path: "/about",
@@ -24,6 +32,24 @@ const router = createBrowserRouter([
   {
     path: "/contact",
     element: <ContactUs></ContactUs>,
+  },
+  {
+    path: "/login",
+    element: <Login></Login>,
+  },
+  {
+    path: "/dashboard",
+    element: <Dashboard></Dashboard>,
+    children: [
+      {
+        path: "/dashboard/AddPhoto",
+        element: <AddPhotography />,
+      },
+      {
+        path: "/dashboard/AddVideo",
+        element: <AddVideography />,
+      },
+    ],
   },
 ]);
 
