@@ -6,11 +6,11 @@ const Login = () => {
         <div className='loginBox'>
            <h1>Login</h1>
             <form>
-            <div class="row">
+            <div class="loginRow">
                 <label for="email">Email</label>
                 <input type="email" name="email" autocomplete="off" placeholder="email@example.com"/>
             </div>
-            <div class="row">
+            <div class="loginRow">
                 <label for="password">Password</label>
                 <input type="password" name="password"/>
             </div>
