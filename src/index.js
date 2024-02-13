@@ -55,6 +55,7 @@ const router = createBrowserRouter([
       {
         path: "/dashboard/AllPhoto",
         element: <AllPhotography />,
+        loader: () => fetch('https://photography-server-7sxlvnm17-omarali18s-projects.vercel.app/allPhotos')
       },
       {
         path: "/dashboard/AddVideo",
@@ -63,6 +64,7 @@ const router = createBrowserRouter([
       {
         path: "/dashboard/AllVideo",
         element: <AllVideography />,
+        loader: () => fetch('http://localhost:5000/allVideo')
       },
     ],
   },

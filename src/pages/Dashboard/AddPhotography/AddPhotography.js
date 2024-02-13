@@ -2,10 +2,37 @@ import React from 'react';
 import "./AddPhotography.css"
 
 const AddPhotography = () => {
+
+    const handleSubmitPhoto = e =>{
+        e.preventDefault();
+        const form = e.target;
+        const name = form.name.value;
+        const img_1 = form.img_1.value;
+        const img_2 = form.img_2.value;
+        const description = form.Description.value;
+        const date = form.Date.value;
+        const photo = {name, img_1, img_2, description, date};
+        console.log(photo);
+        fetch('http://localhost:5000/addPhoto',{
+            method: 'POST',
+            headers:{
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(photo)
+        })
+        .then(res => res.json())
+        .then(data =>{
+            console.log(data);
+        })
+    }
     return (
         <div className='addProductBox'>
            <h1>Add Photography</h1>
-            <form>
+            <form onSubmit={handleSubmitPhoto}>
+            <div class="addProductRow">
+                <label for="name">Name</label>
+                <input type="text" name="name" autocomplete="off" placeholder="Name"/>
+            </div>
             <div class="addProductRow">
                 <label for="img_1">Image 1</label>
                 <input type="text" name="img_1" autocomplete="off" placeholder="Image 1"/>
