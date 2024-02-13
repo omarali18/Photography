@@ -15,6 +15,9 @@ import Login from './pages/Login/Login';
 import Dashboard from './pages/Dashboard/Dashboard/Dashboard';
 import AddPhotography from './pages/Dashboard/AddPhotography/AddPhotography';
 import AddVideography from './pages/Dashboard/AddVideography/AddVideography';
+import AllVideography from './pages/Dashboard/AllVideography/AllVideography';
+import AllPhotography from './pages/Dashboard/AllPhotography/AllPhotography';
+import DashboardBox from './pages/Dashboard/DashboardBox/DashboardBox';
 
 const router = createBrowserRouter([
   {
@@ -42,12 +45,24 @@ const router = createBrowserRouter([
     element: <Dashboard></Dashboard>,
     children: [
       {
+        path: "/dashboard",
+        element: <DashboardBox />,
+      },
+      {
         path: "/dashboard/AddPhoto",
         element: <AddPhotography />,
       },
       {
+        path: "/dashboard/AllPhoto",
+        element: <AllPhotography />,
+      },
+      {
         path: "/dashboard/AddVideo",
         element: <AddVideography />,
+      },
+      {
+        path: "/dashboard/AllVideo",
+        element: <AllVideography />,
       },
     ],
   },

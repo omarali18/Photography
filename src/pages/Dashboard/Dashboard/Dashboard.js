@@ -72,7 +72,7 @@ function Dashboard(props) {
             </ListItemButton>
     </ListItem>
       </Link>
-      <Link className="DashBoardLink" to={`/login`}>
+      <Link className="DashBoardLink" to={`/dashboard/AllPhoto`}>
       <ListItem disablePadding>
             <ListItemButton>
               <ListItemIcon>
@@ -89,6 +89,16 @@ function Dashboard(props) {
               <VideoCallIcon />
               </ListItemIcon>
               <ListItemText primary={'Add Videography'}/>
+            </ListItemButton>
+    </ListItem>
+      </Link>
+      <Link className="DashBoardLink" to={`/dashboard/AllVideo`}>
+      <ListItem disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+              <VideocamIcon />
+              </ListItemIcon>
+              <ListItemText primary={'All Videography'}/>
             </ListItemButton>
     </ListItem>
       </Link>
@@ -124,14 +134,14 @@ function Dashboard(props) {
               <ListItemText primary={'Add Videography'}/>
             </ListItemButton>
     </ListItem> */}
-      <ListItem disablePadding>
+      {/* <ListItem disablePadding>
             <ListItemButton>
               <ListItemIcon>
               <VideocamIcon />
               </ListItemIcon>
               <ListItemText primary={'All Videography'}/>
             </ListItemButton>
-    </ListItem>
+    </ListItem> */}
         {/* {['Inbozx', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
           <ListItem key={text} disablePadding>
             <ListItemButton>
@@ -213,6 +223,7 @@ function Dashboard(props) {
       <Box
         component="main"
         sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
+        className='p-0'
       >
         <Toolbar />
         {/* <Typography paragraph>
