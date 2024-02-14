@@ -15,13 +15,15 @@ h1 {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  margin: 15px auto 50px;
 }
 .card {
   max-width: 300px;
+  width: 400px;
   /* min-height: 250px; */
   /* background: #673ab7; */
   /* background: #02b875; */
-  padding: 30px 30px;
+  padding: 30px 30px 15px 30px;
   border-radius: 3px;
   box-sizing: border-box;
   color: #fff;
@@ -84,4 +86,9 @@ h1 {
 }
 .productCounter {
   font-weight: 600;
+}
+@media screen and (max-width: 560px) {
+  .card {
+    width: 300px;
+  }
 }
