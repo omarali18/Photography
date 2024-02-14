@@ -44,7 +44,7 @@ const Footer = () => {
                     <div className="col-sm-12 col-md-6 mb-50">
                         <div className="footer-widget footerContent">
                             <div className="footer-logo">
-                                <a href="index.html"><img src={logo} className="img-fluid" alt="logo"/></a>
+                                <a href="index.html"><img src={logo} className="img-fluid" alt="logo" style={{width:'150px'}} /></a>
                             </div>
                             <div className="footer-text">
                                 <p>Photography transcends mere images, serving as a portal to memories, emotions, and stories. It's an art form that immortalizes moments, connecting people through shared experiences captured in frames.</p>

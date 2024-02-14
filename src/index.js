@@ -63,7 +63,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/dashboard/AllVideo",
-        element: <AllVideography />,
+        element: <AllVideography />, 
         loader: () => fetch('https://photography-server-cyan.vercel.app/allVideo')
       },
     ],

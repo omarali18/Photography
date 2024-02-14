@@ -1,137 +1,126 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'poppins', sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
 }
-.videoBox{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    min-height: 40vh;
-    background: #010615;
+.videoBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 93vh;
+  background: #010615;
 }
-.singleBox{
-    position: relative;
-    width: 300px;
-    height: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 40px;
-    transition: 0.5s;
-    background: #060c21;
-
+.singleBox {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px;
+  transition: 0.5s;
+  background: #060c21;
 }
-.singleBox:hover{
-    height: 400px;
+.singleBox:hover {
+  height: 400px;
 }
 .singleBox .imgBx {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    padding: 10px;
-    box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  box-sizing: border-box;
 }
- .singleBox .imgBx img{
-    max-width: 100%;
-    width: 100%;
-    opacity: 0.5;
-    transition: 0.5s;
-    filter: none;
- }
+.singleBox .imgBx img {
+  max-width: 100%;
+  width: 100%;
+  opacity: 0.5;
+  transition: 0.5s;
+  filter: none;
+}
 
- .singleBox:hover .imgBx img{
+.singleBox:hover .imgBx img {
   opacity: 1;
- }
+}
 
- .singleBox:before{
-     content: '';
-     position: absolute;
-     top: -2px;
-     left: -2px;
-     right: -2px;
-     bottom: -2px;
-     background: #fff;
-     z-index: -1;
- }
- .singleBox:after{
-    content: '';
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    right: -2px;
-    bottom: -2px;
-    background: #fff;
-    z-index: -2;
-    filter: blur(40px);
+.singleBox:before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: #fff;
+  z-index: -1;
+}
+.singleBox:after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: #fff;
+  z-index: -2;
+  filter: blur(40px);
 }
 .singleBox:before,
-.singleBox::after
-{
-background: linear-gradient(235deg,#89ff00,#010615,#00bcd4);
-}
- 
-.singleBox:nth-child(2):before
-.singleBox:nth-child(2):after
-{
-    background: linear-gradient(235deg,#89ff00,#010615,#00bcd4);
- 
+.singleBox::after {
+  background: linear-gradient(235deg, #89ff00, #010615, #00bcd4);
 }
 
-.singleBox:nth-child(3):before
-.singleBox:nth-child(3):after
-{
-    background: linear-gradient(235deg,#89ff00,#010615,#00bcd4);
- 
+.singleBox:nth-child(2):before .singleBox:nth-child(2):after {
+  background: linear-gradient(235deg, #89ff00, #010615, #00bcd4);
+}
+
+.singleBox:nth-child(3):before .singleBox:nth-child(3):after {
+  background: linear-gradient(235deg, #89ff00, #010615, #00bcd4);
 }
 
 .singleBox .AllContent {
-    position: absolute;
-    bottom: 0;
-    left: 10px;
-    right: 10px;
-    bottom: 10px;
-    height: 90px;
-    background: rgba(0, 0, 0, 0.4);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    transition: 0.5s;
-
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  height: 90px;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: 0.5s;
 }
-.singleBox:hover .AllContent{
-    opacity: 1;
+.singleBox:hover .AllContent {
+  opacity: 1;
 }
-.AllContent button{
-    width: 100%;
+.AllContent button {
+  width: 100%;
   padding: 3px;
   font-size: 18px;
-  background: #15C39A;
+  background: #15c39a;
   color: #fff;
   border: none;
   border-radius: 100px;
   cursor: pointer;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   margin-top: 15px;
   transition: background 0.2s ease-out;
   margin: 10px 20px;
 }
-.AllContent .deleteBtn{
-    background-color: #FB0000;
+.AllContent .deleteBtn {
+  background-color: #fb0000;
 }
-.videoName{
-    text-align: center;
-    font-size: 26px;
-    color: #FFF;
-    border-radius: 5px;
-    padding: 0 5px;
-    font-family: cursive;
-    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+.videoName {
+  text-align: center;
+  font-size: 26px;
+  color: #fff;
+  border-radius: 5px;
+  padding: 0 5px;
+  font-family: cursive;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
 }
-
-   

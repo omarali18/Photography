@@ -35,7 +35,7 @@ const ContactUs = () => {
             <div className="contact-box">
                 <div className="contact-links">
                 <h2>CONTACT</h2>
-                <div className="links">
+                <div className="links contactForm">
                     <div className="link">
                     <a><img src="https://i.postimg.cc/m2mg2Hjm/linkedin.png" alt="linkedin"/></a>
                     </div>
