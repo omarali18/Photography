@@ -52,6 +52,16 @@ function Dashboard(props) {
       <Toolbar />
       <Divider />
       <List>
+      <Link className="DashBoardLink" to={`/`}>
+      <ListItem disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+              <HomeIcon />
+              </ListItemIcon>
+              <ListItemText primary={'Home'}/>
+            </ListItemButton>
+    </ListItem>
+      </Link>
       <Link className="DashBoardLink" to={`/dashboard`}>
       <ListItem disablePadding>
             <ListItemButton>
