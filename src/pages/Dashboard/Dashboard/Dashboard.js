@@ -25,10 +25,14 @@ import VideoCallIcon from "@mui/icons-material/VideoCall";
 import VideocamIcon from "@mui/icons-material/Videocam";
 import { Link, Outlet } from "react-router-dom";
 import navLogo from "../../../images/shortImg/topLogo.png";
+import LogoutIcon from '@mui/icons-material/Logout';
+import { useContext } from "react";
+import { AuthContext } from "../../../AuthProvider/AuthProvider";
 
 const drawerWidth = 240;
 
 function Dashboard(props) {
+  const {singOut} = useContext(AuthContext)
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const [isClosing, setIsClosing] = React.useState(false);
@@ -47,6 +51,14 @@ function Dashboard(props) {
       setMobileOpen(!mobileOpen);
     }
   };
+
+  const handleLogout = ()=>{
+    singOut()
+    .then(() => {
+      console.log("logout success");
+    }).catch((error) => {
+    });
+  }
 
   const drawer = (
     <div>
@@ -113,6 +125,16 @@ function Dashboard(props) {
             </ListItemButton>
           </ListItem>
         </Link>
+        <Link className="DashBoardLink" onClick={handleLogout}>
+      <ListItem disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+              <LogoutIcon />
+              </ListItemIcon>
+              <ListItemText primary={'LogOut'}/>
+            </ListItemButton>
+    </ListItem>
+      </Link>
         {/* <ListItem disablePadding>
             <ListItemButton>
               <ListItemIcon>

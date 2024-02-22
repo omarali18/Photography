@@ -18,6 +18,9 @@ import AddVideography from './pages/Dashboard/AddVideography/AddVideography';
 import AllVideography from './pages/Dashboard/AllVideography/AllVideography';
 import AllPhotography from './pages/Dashboard/AllPhotography/AllPhotography';
 import DashboardBox from './pages/Dashboard/DashboardBox/DashboardBox';
+import Register from './pages/Register/Register';
+import AuthProvider from './AuthProvider/AuthProvider';
+import PrivateRoute from './pages/Login/PrivateRoute/PrivateRoute';
 
 const router = createBrowserRouter([
   {
@@ -35,6 +38,11 @@ const router = createBrowserRouter([
   {
     path: "/contact",
     element: <ContactUs></ContactUs>,
+    // element: <PrivateRoute><ContactUs></ContactUs></PrivateRoute>,
+  },
+  {
+    path: "/signUp",
+    element: <Register></Register>,
   },
   {
     path: "/login",
@@ -42,7 +50,8 @@ const router = createBrowserRouter([
   },
   {
     path: "/dashboard",
-    element: <Dashboard></Dashboard>,
+    // element: <Dashboard></Dashboard>,
+    element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
     children: [
       {
         path: "/dashboard",
@@ -73,8 +82,9 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    {/* <App /> */}
+    <AuthProvider>
     <RouterProvider router={router} />
+    </AuthProvider>
   </React.StrictMode>
 );
 
