@@ -47,15 +47,15 @@ const Register = () => {
                     message == "Your key is rong" ? <p style={{color:"#ff0505", fontSize:"15px"}}>{message}</p> : <p style={{color:"#0fc70f", fontSize:"15px"}}>{message}</p>
                 }
             <div class="loginRow" style={{ marginBottom:"0px" }}>
-                <label for="key">Enter key</label>
+                <label htmlFor="key">Enter key</label>
                 <input type="text" name="key" autocomplete="off" placeholder="Enter key"/>
             </div>
             <div class="loginRow" style={{ marginBottom:"0px" }}>
-                <label for="email">Email</label>
+                <label htmlFor="email">Email</label>
                 <input type="email" name="email" autocomplete="off" placeholder="email@example.com"/>
             </div>
             <div class="loginRow">
-                <label for="password" style={{ marginBottom:"0px" }}>Password</label>
+                <label htmlFor="password" style={{ marginBottom:"0px" }}>Password</label>
                 <input type="password" style={{ marginBottom:"0px" }} name="password"/>
             </div>
             <button type="submit">Register</button>

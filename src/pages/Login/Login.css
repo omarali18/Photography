@@ -14,7 +14,7 @@
   height: 100vh;
 }
 
-form{
+.formBox{
     background-color: #fff;
     max-width: 360px;
     width: 100%;

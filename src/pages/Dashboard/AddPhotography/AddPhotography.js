@@ -27,9 +27,9 @@ const AddPhotography = () => {
   return (
     <div className="addProductBox">
       <h1>Add Photography</h1>
-      <form onSubmit={handleSubmitPhoto}>
-        <div class="addProductRow">
-          <label for="name">Name</label>
+      <form onSubmit={handleSubmitPhoto} className="form">
+        <div className="addProductRow">
+          <label htmlFor="name">Name</label>
           <input
             type="text"
             name="name"
@@ -37,8 +37,8 @@ const AddPhotography = () => {
             placeholder="Name"
           />
         </div>
-        <div class="addProductRow">
-          <label for="img_1">Image 1</label>
+        <div className="addProductRow">
+          <label htmlFor="img_1">Image 1</label>
           <input
             type="text"
             name="img_1"
@@ -46,8 +46,8 @@ const AddPhotography = () => {
             placeholder="Image 1"
           />
         </div>
-        <div class="addProductRow">
-          <label for="img_2">Image 2</label>
+        <div className="addProductRow">
+          <label htmlFor="img_2">Image 2</label>
           <input
             type="text"
             name="img_2"
@@ -55,8 +55,8 @@ const AddPhotography = () => {
             placeholder="Image 2"
           />
         </div>
-        <div class="addProductRow">
-          <label for="Description">Description</label>
+        <div className="addProductRow">
+          <label htmlFor="Description">Description</label>
           <input
             type="text"
             name="Description"
@@ -64,8 +64,8 @@ const AddPhotography = () => {
             placeholder="Description"
           />
         </div>
-        <div class="addProductRow">
-          <label for="Date">Date</label>
+        <div className="addProductRow">
+          <label htmlFor="Date">Date</label>
           <input
             type="date"
             name="Date"
@@ -73,11 +73,11 @@ const AddPhotography = () => {
             placeholder="Date"
           />
         </div>
-        {/* <div class="addProductRow">
+        {/* <div className="addProductRow">
                 <label for="email">Email</label>
                 <input type="email" name="email" autocomplete="off" placeholder="email@example.com"/>
             </div>
-            <div class="addProductRow">
+            <div className="addProductRow">
                 <label for="password">Password</label>
                 <input type="password" name="password"/>
             </div> */}

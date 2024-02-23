@@ -29,9 +29,9 @@ const AddVideography = () => {
   return (
     <div className="addProductBox">
       <h1>Add Videography</h1>
-      <form onSubmit={handleSubmitVideo}>
+      <form onSubmit={handleSubmitVideo} className="form">
         <div class="addProductRow">
-          <label for="name">Name</label>
+          <label htmlFor="name">Name</label>
           <input
             type="text"
             name="name"
@@ -40,7 +40,7 @@ const AddVideography = () => {
           />
         </div>
         <div class="addProductRow">
-          <label for="Description">Description</label>
+          <label htmlFor="Description">Description</label>
           <input
             type="text"
             name="Description"
@@ -49,7 +49,7 @@ const AddVideography = () => {
           />
         </div>
         <div class="addProductRow">
-          <label for="video">Video Link</label>
+          <label htmlFor="video">Video Link</label>
           <input
             type="text"
             name="video"
@@ -58,7 +58,7 @@ const AddVideography = () => {
           />
         </div>
         <div class="addProductRow">
-          <label for="Date">Date</label>
+          <label htmlFor="Date">Date</label>
           <input
             type="date"
             name="Date"
