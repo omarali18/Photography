@@ -27,6 +27,7 @@ const ViewOneGrapher = () => {
             <div className='d-flex'>
                 <div className='border border-success p-2 m-3'>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo deserunt quae voluptates voluptatibus sequi nobis enim inventore dolores, illo voluptatem ratione possimus fugiat atque debitis saepe deleniti distinctio quas beatae.</p>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo deserunt quae voluptates voluptatibus sequi nobis enim inventore dolores, illo voluptatem ratione possimus fugiat atque debitis saepe deleniti distinctio quas beatae.</p>
                     {/* <LocalizationProvider dateAdapter={AdapterDayjs}>
                     <StaticDatePicker
                         displayStaticWrapperAs="desktop"
