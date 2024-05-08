@@ -45,9 +45,12 @@ const Navbar = () => {
                             <li className="nav_list-item">
                                 <Link className="nav_list-link" to={`/contact`}>Contact us</Link>
                             </li>
-                            <li className="nav_list-item">
+                            {/* <li className="nav_list-item">
                                 <Link className="nav_list-link" to={`/dashboard`}>dashboard</Link>
-                            </li>
+                            </li> */}
+                            {user ? <li className="nav_list-item">
+                                <Link className="nav_list-link" to={`/dashboard`}>dashboard</Link>
+                            </li>: ""}
                             <li className="nav_list-item">
                             {user ? <Link className="nav_list-link" onClick={handleLogout} to={`/`}>Logout</Link> :  <Link className="nav_list-link" to={`/login`}>Login</Link>}
                             </li>

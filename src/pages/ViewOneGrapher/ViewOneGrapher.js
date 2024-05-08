@@ -24,8 +24,9 @@ const ViewOneGrapher = () => {
     return (
         <div>
             <Navbar/>
-            <div>
-                <div>
+            <div className='d-flex'>
+                <div className='border border-success p-2 m-3'>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo deserunt quae voluptates voluptatibus sequi nobis enim inventore dolores, illo voluptatem ratione possimus fugiat atque debitis saepe deleniti distinctio quas beatae.</p>
                     {/* <LocalizationProvider dateAdapter={AdapterDayjs}>
                     <StaticDatePicker
                         displayStaticWrapperAs="desktop"
@@ -36,7 +37,9 @@ const ViewOneGrapher = () => {
                     />
                     </LocalizationProvider> */}
                 </div>
-                <div></div>
+                <div className='border border-danger p-2 m-3'>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga quae quo necessitatibus asperiores ex perspiciatis debitis reprehenderit magnam illo soluta hic vel maiores, nisi accusamus rerum omnis esse delectus! Eveniet?</p>
+                </div>
             </div>
             <Footer/>
         </div>
