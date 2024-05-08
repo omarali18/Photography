@@ -58,10 +58,10 @@ const Register = () => {
                 <label htmlFor="password" style={{ marginBottom:"0px" }}>Password</label>
                 <input type="password" style={{ marginBottom:"0px" }} name="password"/>
             </div>
-            <button type="submit">Register</button>
+            <button className='loginButton' type="submit">Register</button>
             </form>
 
-            <Link className="nav_list-link" to={`/login`}><button style={{ padding:"5px 15px" }}>Go to Login</button></Link>
+            <Link className="nav_list-link" style={{ marginTop:"20px" }} to={`/login`}><span style={{ color:'blue', padding:"5px 15px" }}>Go to Login</span></Link>
             {/* <button>Create New Admin</button> */}
             {/* <Box sx={{ textAlign: "center" }}>
                     <Button onClick={handleGoogleLogin} sx={{ py: 2, px: 4, my: 5 }} type="submit" variant="contained">Login With Google</Button>

@@ -21,6 +21,9 @@ import DashboardBox from './pages/Dashboard/DashboardBox/DashboardBox';
 import Register from './pages/Register/Register';
 import AuthProvider from './AuthProvider/AuthProvider';
 import PrivateRoute from './pages/Login/PrivateRoute/PrivateRoute';
+import AddPhotographer from './pages/Dashboard/AddPhotographer/AddPhotographer';
+import MySchedule from './pages/Dashboard/MySchedule/MySchedule';
+import ViewOneGrapher from './pages/ViewOneGrapher/ViewOneGrapher';
 
 const router = createBrowserRouter([
   {
@@ -49,6 +52,10 @@ const router = createBrowserRouter([
     element: <Login></Login>,
   },
   {
+    path: "/bookingnow/:id",
+    element: <PrivateRoute><ViewOneGrapher></ViewOneGrapher></PrivateRoute>,
+  },
+  {
     path: "/dashboard",
     // element: <Dashboard></Dashboard>,
     element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
@@ -58,13 +65,21 @@ const router = createBrowserRouter([
         element: <DashboardBox />,
       },
       {
+        path: "/dashboard/AddPhotographer",
+        element: <AddPhotographer />,
+      },
+      {
+        path: "/dashboard/MySchedule",
+        element: <MySchedule />,
+      },
+      {
         path: "/dashboard/AddPhoto",
         element: <AddPhotography />,
       },
       {
         path: "/dashboard/AllPhoto",
         element: <AllPhotography />,
-        loader: () => fetch('https://photography-server-cyan.vercel.app/allPhotos')
+        loader: () => fetch('http://localhost:5000/allPhotos')
       },
       {
         path: "/dashboard/AddVideo",
@@ -73,7 +88,7 @@ const router = createBrowserRouter([
       {
         path: "/dashboard/AllVideo",
         element: <AllVideography />, 
-        loader: () => fetch('https://photography-server-cyan.vercel.app/allVideo')
+        loader: () => fetch('http://localhost:5000/allVideo')
       },
     ],
   },

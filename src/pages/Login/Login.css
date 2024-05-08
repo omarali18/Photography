@@ -57,7 +57,7 @@
   color: #C8CDDF;
 }
 
-button {
+.loginButton {
   width: 100%;
   padding: 12px;
   font-size: 18px;
@@ -71,7 +71,7 @@ button {
   transition: background 0.2s ease-out;
 }
 
-button:hover {
+.loginButton:hover {
   background: #55D3AC;
 }
 

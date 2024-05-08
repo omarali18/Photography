@@ -79,13 +79,13 @@ const Login = () => {
                 <label htmlFor="password">Password</label>
                 <input type="password" name="password"/>
             </div>
-            <button style={{ padding: "8px 12px" }} type="submit">Login</button>
+            <button className='loginButton' style={{ padding: "8px 12px" }} type="submit">Login</button>
             </form>
-            <button style={{ padding: "8px 12px" }} onClick={handleGoogleLogin}>Login With Google</button>
+            <button className='loginButton' style={{ padding: "8px 12px" }} onClick={handleGoogleLogin}>Login With Google</button>
             </div>
             {/* <button onClick={handleGoogleLogin}>Google</button> */}
 
-            <Link className="nav_list-link" to={`/signUp`}><button style={{ padding:"5px 15px" }}>Create New Admin</button></Link>
+            <Link className="nav_list-link" style={{ marginTop:"20px" }} to={`/signUp`}><span style={{ color:'blue', padding:"5px 15px" }}>Create New Account</span></Link>
             {/* <button>Create New Admin</button> */}
             {/* <Box sx={{ textAlign: "center" }}>
                     <Button onClick={handleGoogleLogin} sx={{ py: 2, px: 4, my: 5 }} type="submit" variant="contained">Login With Google</Button>

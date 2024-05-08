@@ -1,0 +1,68 @@
+
+
+.homeGrapherContainer{
+    width: 75%;
+    margin: auto;
+}
+.card:nth-child(odd){
+    background-color: white !important;
+}
+.card{
+    padding: 0px 0px 0px 0px !important;
+    color: rgb(0,0,0) !important;
+}
+
+
+.offer-contaimer{
+    width: 70%;
+    margin: auto;
+}
+.offer-contaimer .top{
+    width: 70%;
+    margin: 0 auto;
+    margin-bottom: 6rem;
+}
+.offer-container-text{
+    margin-bottom: 30px;
+    color: rgb(63, 63, 243);
+}
+.offer-contaimer .btm{
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 6rem;
+}
+.grapherMoreBtn{
+    background-image: linear-gradient(to right, #DFC251, #C68B25); /* Adjust colors as needed */
+    border: none;
+    color: white; /* Text color */
+    padding: 10px 20px; /* Adjust padding as needed */
+    border-radius: 5px; /* Adjust border radius as needed */
+    cursor: pointer;border: none;
+
+}
+
+
+
+.single-card{
+    height: 650px;
+}
+.single-card img{
+    height: 350px;
+}
+
+@media(max-width: 1419px) and (min-width: 1207px) {
+    .offer-contaimer{
+        width: 85%;
+        /* margin: auto; */
+    }
+}
+@media(max-width: 1206px) {
+    .offer-contaimer{
+        width: 95%;
+    }
+}
+/* @media(max-width: 1419px) {
+    .offer-contaimer{
+        width: 85%;
+    }
+} */

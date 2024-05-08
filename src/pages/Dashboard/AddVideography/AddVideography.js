@@ -66,7 +66,7 @@ const AddVideography = () => {
             placeholder="Date"
           />
         </div>
-        <button type="submit">Post</button>
+        <button className="addPhotoVideoBtn" type="submit">Post</button>
       </form>
     </div>
   );

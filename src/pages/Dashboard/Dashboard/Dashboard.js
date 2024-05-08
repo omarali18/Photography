@@ -85,6 +85,26 @@ function Dashboard(props) {
             </ListItemButton>
           </ListItem>
         </Link>
+        <Link className="DashBoardLink" to={`/dashboard/AddPhotographer`}>
+          <ListItem disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+                <AddCardIcon />
+              </ListItemIcon>
+              <ListItemText primary={"Add Photographer"} />
+            </ListItemButton>
+          </ListItem>
+        </Link>
+        <Link className="DashBoardLink" to={`/dashboard/MySchedule`}>
+          <ListItem disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+                <AddCardIcon />
+              </ListItemIcon>
+              <ListItemText primary={"Add Schedule"} />
+            </ListItemButton>
+          </ListItem>
+        </Link>
         <Link className="DashBoardLink" to={`/dashboard/AddPhoto`}>
           <ListItem disablePadding>
             <ListItemButton>

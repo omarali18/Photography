@@ -1,9 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import "./Navbar.css"
 import navLogo from '../../../images/shortImg/topLogo.png'
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../../AuthProvider/AuthProvider';
+
 
 const Navbar = () => {
+    const {user, singOut} = useContext(AuthContext);
     
     const activePhoneNav = e => {
         const navList = document.getElementById('navList');
@@ -14,6 +17,13 @@ const Navbar = () => {
         open.classList.toggle('active');
         close.classList.toggle('active');
     }
+    const handleLogout = ()=>{
+        singOut()
+        .then(() => {
+          console.log("logout success");
+        }).catch((error) => {
+        });
+      }
     return (
         <div>
             <header>
@@ -34,6 +44,12 @@ const Navbar = () => {
                             </li>
                             <li className="nav_list-item">
                                 <Link className="nav_list-link" to={`/contact`}>Contact us</Link>
+                            </li>
+                            <li className="nav_list-item">
+                                <Link className="nav_list-link" to={`/dashboard`}>dashboard</Link>
+                            </li>
+                            <li className="nav_list-item">
+                            {user ? <Link className="nav_list-link" onClick={handleLogout} to={`/`}>Logout</Link> :  <Link className="nav_list-link" to={`/login`}>Login</Link>}
                             </li>
                         </ul>
                         <a href="index.html" className="btn btn-black">Get an invite</a>

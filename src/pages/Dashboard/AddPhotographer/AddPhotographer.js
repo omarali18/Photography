@@ -1,33 +1,34 @@
-import React from "react";
-import "./AddPhotography.css";
+import React from 'react';
 
-const AddPhotography = () => {
-  const handleSubmitPhoto = (e) => {
-    e.preventDefault();
-    const form = e.target;
-    const name = form.name.value;
-    const img_1 = form.img_1.value;
-    const img_2 = form.img_2.value;
-    const description = form.Description.value;
-    const date = form.Date.value;
-    const photo = { name, img_1, img_2, description, date };
-    console.log(photo);
-    fetch("https://photography-server-cyan.vercel.app/addPhoto", {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(photo),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-      });
-  };
-  return (
-    <div className="addProductBox">
-      <h1>Add Photography</h1>
-      <form onSubmit={handleSubmitPhoto} className="form">
+const AddPhotographer = () => {
+
+    const handleSubmitPhotoGrapher = (e) => {
+        e.preventDefault();
+        const form = e.target;
+        const name = form.name.value;
+        const img_1 = form.img_1.value;
+        const price = form.price.value;
+        const description = form.Description.value;
+        const date = form.Date.value;
+        const grapher = { name, img_1, price, description, date };
+        console.log(grapher);
+        fetch("http://localhost:5000/grapher", {
+          method: "POST",
+          headers: {
+            "content-type": "application/json",
+          },
+          body: JSON.stringify(grapher),
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            console.log(data);
+          });
+      };
+
+    return (
+        <div className="addProductBox">
+      <h1>Add New Photographer</h1>
+      <form onSubmit={handleSubmitPhotoGrapher} className="form">
         <div className="addProductRow">
           <label htmlFor="name">Name</label>
           <input
@@ -38,21 +39,21 @@ const AddPhotography = () => {
           />
         </div>
         <div className="addProductRow">
-          <label htmlFor="img_1">Image 1</label>
+          <label htmlFor="img_1">Image </label>
           <input
             type="text"
             name="img_1"
             autocomplete="off"
-            placeholder="Image 1"
+            placeholder="Image URL"
           />
         </div>
         <div className="addProductRow">
-          <label htmlFor="img_2">Image 2</label>
+          <label htmlFor="img_2">Price per hour.</label>
           <input
             type="text"
-            name="img_2"
+            name="price"
             autocomplete="off"
-            placeholder="Image 2"
+            placeholder="Price per hour."
           />
         </div>
         <div className="addProductRow">
@@ -84,7 +85,7 @@ const AddPhotography = () => {
         <button className="addPhotoVideoBtn" type="submit">Post</button>
       </form>
     </div>
-  );
+    );
 };
 
-export default AddPhotography;
+export default AddPhotographer;
