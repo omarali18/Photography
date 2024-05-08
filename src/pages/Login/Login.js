@@ -38,33 +38,41 @@ const Login = () => {
         });
     }
 
-    const myEmail = "omar.eu22@gmail.com";
 
      const handleGoogleLogin = () => {
-        // signInWithPopup(auth, provider)
-        
-        // loginWithGoogle()
-        signInWithPopup(auth, provider)
+         // signInWithPopup(auth, provider)
+         loginWithGoogle()
         .then((result) => {
-            const user = result.user;
-            console.log(user.email);
-            if (user.email === myEmail) {
                 navigate(location?.state ? location.state : '/dashboard')
-                console.log('user',user.email);
-            } else {
-                signOut(auth)
-                    .then(() => {
-                        console.log("Sign-out successful.");
-                    })
-                    .catch((error) => {
-                        console.log("An error occurred during sign-out:", error);
-                    });
-                console.log("Access denied. Only 'omar.eu22@gmail.com' is allowed.");
-            }
           }).catch((error) => {
             console.log(error.message);
           })
     }
+    //  const handleGoogleLogin = () => {
+    //     // signInWithPopup(auth, provider)
+        
+    //     // loginWithGoogle()
+    //     signInWithPopup(auth, provider)
+    //     .then((result) => {
+    //         const user = result.user;
+    //         console.log(user.email);
+    //         if (user.email === myEmail) {
+    //             navigate(location?.state ? location.state : '/dashboard')
+    //             console.log('user',user.email);
+    //         } else {
+    //             signOut(auth)
+    //                 .then(() => {
+    //                     console.log("Sign-out successful.");
+    //                 })
+    //                 .catch((error) => {
+    //                     console.log("An error occurred during sign-out:", error);
+    //                 });
+    //             console.log("Access denied. Only 'omar.eu22@gmail.com' is allowed.");
+    //         }
+    //       }).catch((error) => {
+    //         console.log(error.message);
+    //       })
+    // }
 
     return (
         <div className='loginBox'>
@@ -85,6 +93,7 @@ const Login = () => {
             </div>
             {/* <button onClick={handleGoogleLogin}>Google</button> */}
 
+            {/* <Link className="nav_list-link" to={`/signUp`}><button className='loginButton' style={{ padding:"5px 15px" }}>Create New Admin</button></Link> */}
             <Link className="nav_list-link" style={{ marginTop:"20px" }} to={`/signUp`}><span style={{ color:'blue', padding:"5px 15px" }}>Create New Account</span></Link>
             {/* <button>Create New Admin</button> */}
             {/* <Box sx={{ textAlign: "center" }}>
