@@ -43,6 +43,19 @@ const Login = () => {
          // signInWithPopup(auth, provider)
          loginWithGoogle()
         .then((result) => {
+            const user = result.user;
+            const newUser = {name:user.displayName, email:user.email, password:"", photo:user.photoURL, admin:''}
+            fetch("http://localhost:5000/user", {
+                    method: "POST",
+                    headers: {
+                        "content-type": "application/json",
+                    },
+                    body: JSON.stringify(newUser),
+                    })
+                    .then((res) => res.json())
+                    .then((data) => {
+                    console.log(data);
+                })
                 navigate(location?.state ? location.state : '/dashboard')
           }).catch((error) => {
             console.log(error.message);

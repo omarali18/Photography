@@ -24,6 +24,7 @@ import PrivateRoute from './pages/Login/PrivateRoute/PrivateRoute';
 import AddPhotographer from './pages/Dashboard/AddPhotographer/AddPhotographer';
 import MySchedule from './pages/Dashboard/MySchedule/MySchedule';
 import ViewOneGrapher from './pages/ViewOneGrapher/ViewOneGrapher';
+import ViewAllGrapher from './pages/ViewAllGrapher/ViewAllGrapher';
 
 const router = createBrowserRouter([
   {
@@ -54,6 +55,10 @@ const router = createBrowserRouter([
   {
     path: "/bookingnow/:id",
     element: <PrivateRoute><ViewOneGrapher></ViewOneGrapher></PrivateRoute>,
+  },
+  {
+    path: "/allphotographer",
+    element: <PrivateRoute> <ViewAllGrapher/> </PrivateRoute>,
   },
   {
     path: "/dashboard",

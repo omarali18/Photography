@@ -44,10 +44,10 @@
 
 
 .single-card{
-    height: 650px;
+    height: 585px;
 }
 .single-card img{
-    height: 350px;
+    height: 300px;
 }
 
 @media(max-width: 1419px) and (min-width: 1207px) {

@@ -13,15 +13,30 @@ const Register = () => {
     const key = '1245';
     const submitRegister = (e)=>{
         // const userKey = e.target.key.value
+        const name = e.target.name.value
         const email = e.target.email.value
         const password = e.target.password.value
         const password_2 = e.target.password_2.value
+        const newUser = {name, email, password, photo:'', admin:""}
         e.preventDefault()
         if(password === password_2){
             createUser( email, password)
             .then((userCredential) => {
                 const user = userCredential.user;
-                setMessage("User Successfully Created")
+                setMessage("User Successfully Created");
+
+                fetch("http://localhost:5000/user", {
+                    method: "POST",
+                    headers: {
+                        "content-type": "application/json",
+                    },
+                    body: JSON.stringify(newUser),
+                    })
+                    .then((res) => res.json())
+                    .then((data) => {
+                    console.log(data);
+                })
+
                 console.log(user);
                 e.target.key.value = '';
                 e.target.email.value = '';
@@ -47,10 +62,10 @@ const Register = () => {
                 {
                     message == "Your key is rong" ? <p style={{color:"#ff0505", fontSize:"15px"}}>{message}</p> : <p style={{color:"#0fc70f", fontSize:"15px"}}>{message}</p>
                 }
-            {/* <div class="loginRow" style={{ marginBottom:"0px" }}>
-                <label htmlFor="key">Enter key</label>
-                <input type="text" name="key" autocomplete="off" placeholder="Enter key"/>
-            </div> */}
+            <div class="loginRow" style={{ marginBottom:"0px" }}>
+                <label htmlFor="name">Name</label>
+                <input type="text" name="name" autocomplete="off" placeholder="Name"/>
+            </div>
             <div class="loginRow" style={{ marginBottom:"0px" }}>
                 <label htmlFor="email">Email</label>
                 <input type="email" name="email" autocomplete="off" placeholder="email@example.com"/>
